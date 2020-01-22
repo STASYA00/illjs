@@ -1,0 +1,2 @@
+# illjs
+Scripting in Illustrator
