@@ -15,8 +15,7 @@ git clone https://github.com/STASYA00/illjs.git
 
 ## Chart Diagram
 
-![Circular Relationship Diagram Sample](assets/chart_diagram_irregular_size.png)
-
+<img src="assets/chart_diagram_irregular_size.png" width="600">
 The diagram consists of the following attributes:
 * Category
 * Subcategory
@@ -29,9 +28,9 @@ The file is a document of size 1200x1200 px where the diagram is fit, based on t
 * Connection attribute should be numerical;
 * no null or missing values.
 
-In the csv I used the Region column is the Category, the Country is the Subcategory (a subdivision of Category) and I can use any of the numerical columns (role of agriculture in economy / GDP / CH4 / role of services in industry / etc). the first and the last rows are likely to be in the top part of the diagram, so if you would like to have a specific order, you might need to restructure the csv file.
+In the csv I used the Region column is the Category, the Country is the Subcategory (a subdivision of Category) and I can use any of the numerical columns (role of agriculture in economy / GDP / CH4 / role of services in industry / etc). the first and the last rows are likely to be in the top part of the diagram, so if you would like to have a specific order, you might need to restructure the .csv file.
 
-![Circular Relationship Diagram Sample](assets/csv_example.png)
+<img src="assets/csv_example.png" width="600">
 
 When the csv is ready, we can proceed directly to the diagram creation.
 
@@ -48,7 +47,7 @@ Then, choose the column of comparison (numerical attribute) and the threshold va
 
 The diagram should be ready.
 
-![Another Sample Diagram, with different comparison between the samples.](assets/chart_diagram1.png)
+<img src="assets/chart_diagram1.png" width="600">
 
 
 
