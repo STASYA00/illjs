@@ -15,12 +15,13 @@ git clone https://github.com/STASYA00/illjs.git
 
 ## Chart Diagram
 
-<img src="assets/chart_diagram_irregular_size.png" width="600">
+<img src="assets/chart_diagram_irregular_size.png" width="600"/>
+
 The diagram consists of the following attributes:
-* Category
-* Subcategory
-* Connection
-* Size (optional)
+* Category;
+* Subcategory;
+* Connection;
+* Size (optional).
 
 The file is a document of size 1200x1200 px where the diagram is fit, based on the length of word elements (try to make them shorter, though). The first popup window will require a csv file, containing at least the first 3 attributes as columns. In my example I used the data of global CH4 emissions (http://www.fao.org/faostat/en/#data/EM). The csv should be structured in the following way:
 * Have the required columns (category, subcategory, connection parameter);
