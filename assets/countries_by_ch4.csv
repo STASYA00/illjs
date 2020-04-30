@@ -1,0 +1,71 @@
+Country,CH4,Region,GDP per capita,Agriculture in economy,Industry in economy,Services in economy,Population density,Part
+Greenland,0.1656,NorthernAmerica,36976.7,10,12.6,82.5,0.1,America
+Canada,961.4504,NorthernAmerica,43205.6,1.8,19.5,78.4,4,America
+United States of America,7950.5178,NorthernAmerica,56053.8,1,17.2,81.3,35.5,America
+Bermuda,0.1468,NorthernAmerica,94399.9,0.7,10.3,87.6,1227,America
+Greenland,0.1656,NorthernAmerica,36976.7,10,12.6,82.5,0.1,America
+Guatemala,248.7848,CentralAmerica,3903.5,10.8,18.5,49.4,157.8,America
+Nicaragua,301.4096,CentralAmerica,2086.9,18.8,14.5,61.4,51.7,America
+Mexico,2225.2288,CentralAmerica,8980.9,3.6,25.2,61.3,66.4,America
+Belize,7.3044,CentralAmerica,4789.4,14.6,15.9,67.9,16.4,America
+El Salvador,62.9654,CentralAmerica,4219.4,10.8,20.2,61.2,307.8,America
+Colombia,1585.2749,SouthAmerica,6056.1,6.8,16.6,69.9,44.2,America
+Argentina,3405.1188,SouthAmerica,14564.5,6,24.8,73.1,16.2,America
+Brazil,13414.2754,SouthAmerica,8528.3,5.2,21.5,63.2,25,America
+Turks Islands,0.0001,SouthAmerica,25121.8,0.6,19.4,40,37.3,America
+Cayman Islands,0.1458,SouthAmerica,62132,0.3,15.5,83.6,256.5,America
+Morocco,294.845,NorthernAfrica,2919.3,13.7,20.7,46.8,80.1,Africa
+Egypt,655.5309,NorthernAfrica,3452.3,11.2,25.3,49.3,98,Africa
+Sudan,1829.4986,NorthernAfrica,1977,32.4,20.4,46.7,23,Africa
+Libya,62.0951,NorthernAfrica,5488.2,0.9,25.1,55.8,3.6,Africa
+Tunisia,85.3053,NorthernAfrica,3660.9,10.3,29.4,58.9,74.2,Africa
+Chad,1825.8347,MiddleAfrica,713,25.4,2,21.4,11.8,Africa
+Nigeria,2030.3225,MiddleAfrica,2714.5,20.9,14.7,57.4,209.6,Africa
+Ethiopia,2758.3395,MiddleAfrica,602.8,40.5,8.4,21.1,105,Africa
+Seychelles,0.0537,MiddleAfrica,14133.2,2.7,17.9,78.2,206,Africa
+Sao Tome and Principe,0.1824,MiddleAfrica,1752.8,12.3,13.5,64.3,212.8,Africa
+Namibia,200.304,SouthernAfrica,4673.6,6.6,14.6,56.3,3.1,Africa
+Botswana,207.2944,SouthernAfrica,6360.6,2.4,14.9,59.4,4,Africa
+South Africa,649.3922,SouthernAfrica,5773,2.4,26.2,67.7,46.8,Africa
+Swaziland,24.5836,SouthernAfrica,3211.7,6.6,17,61,79.5,Africa
+Lesotho,35.6484,SouthernAfrica,940.6,7.7,20,40.3,73.6,Africa
+Papua New Guinea,40.3529,Oceania,2797.6,20.1,5.7,26,18.2,Oceania
+New Zealand,1114.0546,Oceania,38294.3,6.5,21.4,72.6,17.9,Oceania
+Australia,3600.9298,Oceania,51352.2,2.5,21.2,76.1,3.2,Oceania
+Nauru,0.0458,Oceania,18469.2,3,-99,-99,568,Oceania
+Tuvalu,0.2168,Oceania,3362.4,26,-99,-99,373.1,Oceania
+Indonesia,4574.7637,SouthernAsia,3346.5,14,22.4,46.2,145.7,Asia
+Pakistan,5078.6118,SouthernAsia,1410.4,25.5,19.8,38.1,255.6,Asia
+India,19779.0609,SouthernAsia,1614.2,17,24.5,31.2,450.4,Asia
+Maldives,0.0001,SouthernAsia,9446.5,3.1,22.8,69.5,1454.4,Asia
+Singapore,0.0856,SouthernAsia,52239,0,17,82.6,8155.5,Asia
+Kazakhstan,655.3822,CentralAsia,10312.1,5,20.4,61.6,6.7,Asia
+Turkey,815.9134,CentralAsia,9125.8,8.6,27.5,52.9,104.9,Asia
+Uzbekistan,885.3874,CentralAsia,2308.3,19.2,23.9,47.1,75,Asia
+Bahrain,0.7846,CentralAsia,22600.2,0.3,33.4,65.6,1963.9,Asia
+Qatar,5.456,CentralAsia,73653.4,0.2,54.1,44.7,227.3,Asia
+Japan,561.8215,EasternAsia,34628.7,1.2,26.5,69.8,349.7,Asia
+Mongolia,644.8168,EasternAsia,3973.4,14.8,20.7,51,2,Asia
+China,14435.0222,EasternAsia,8109.1,9.2,23.9,49.1,150.1,Asia
+"China, Macao",0.0151,EasternAsia,78586.4,0,17.7,82.1,20821.6,Asia
+Hong Kong,1.1235,EasternAsia,42431,0.1,14.9,84.9,7014.2,Asia
+Portugal,194.8848,SouthernEurope,19239.2,2.3,23.8,68.2,112.8,Europe
+Italy,832.7664,SouthernEurope,30462.4,2.2,27.1,69.4,201.8,Europe
+Spain,980.48,SouthernEurope,25865.4,2.6,19.2,76.8,92.9,Europe
+Malta,2.2436,SouthernEurope,23280.7,1.4,20.9,77.9,1346.4,Europe
+Montenegro,12.101,SouthernEurope,6424.1,9.8,17.3,75.2,46.8,Europe
+Ukraine,434.8947,EasternEurope,2021.6,14,24.6,59.7,76.3,Europe
+Poland,576.2317,EasternEurope,12355.5,2.6,29.6,59.5,124.6,Europe
+Russian Federation,2084.4449,EasternEurope,9243.3,4.7,27.1,66.1,8.8,Europe
+Republic of Moldova,30.084,EasternEurope,1591.4,13.4,30.9,40.3,123.3,Europe
+Slovakia,43.9062,EasternEurope,16082.5,3.7,34.5,62.2,113.3,Europe
+Netherlands,497.4419,WesternEurope,44332.1,1.8,15.9,81.9,505.2,Europe
+Germany,1342.2891,WesternEurope,41686.2,0.6,27.5,71.2,235.6,Europe
+France,1698.3299,WesternEurope,36304.2,1.7,20.5,76.8,118.7,Europe
+Liechtenstein,0.5924,WesternEurope,169491.8,0.7,13,86,237,Europe
+Luxembourg,17.6665,WesternEurope,100160.8,0.2,10.2,88.5,225.3,Europe
+Denmark,240.4752,NorthernEurope,53149.3,1.2,19.2,78.4,135.1,Europe
+Ireland,629.1876,NorthernEurope,60513.6,1,17.7,77.4,69.1,Europe
+United Kingdom,1119.6563,NorthernEurope,44162.4,0.7,18.4,80.4,273.6,Europe
+Iceland,12.3969,NorthernEurope,50936,6.4,17.7,78.2,3.3,Europe
+Estonia,25.3167,NorthernEurope,17112,3.4,29,67.3,30.9,Europe
