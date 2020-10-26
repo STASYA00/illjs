@@ -6,6 +6,7 @@ The diagrams available are:
 * Barplot
 * Pie
 
+<img src="assets/chart_diagram_irregular_size.png" hspace="10" width="200"/><img src="assets/barplot.png" hspace="10" width="200"><img src="assets/donut1.png" hspace="10" width="200"><img src="assets/pie.png" hspace="10" width="200">
 ## Installation
 
 download zip file or use
