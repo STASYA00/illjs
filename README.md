@@ -3,6 +3,8 @@
 Have you ever been in a situation when you want to make a custom diagram, with vector graphics, but the data were too much to analyze them yourself? This is a project for creating data visualizations in Adobe Illustrator. The scripts allow you not to waste your time on hand-drawing while keeping the diagrams ordered and precise.
 The diagrams available are:
 * Circular Relationship Diagram
+* Barplot
+* Pie
 
 ## Installation
 
