@@ -5,8 +5,17 @@ function NewLayer(_name){
   /* Creates a new layer
      Input: new layer's name, str
   */
-  itemLayer = doc.layers.add();
+  itemLayer = app.activeDocument.layers.add();
   itemLayer.name = _name.toString();
+}
+
+function getArrayFromColor(Color){
+  if (Color.typename == 'RGBColor') {
+    return [Color.red, Color.green, Color.blue]
+  }
+  else if (Color.typename == 'CMYKColor') {
+    return [Color.cyan, Color.magenta, Color.yellow, Color.black]
+  }
 }
 
 function makeColor(colorArray){
@@ -160,7 +169,7 @@ function scaleValues(_array, _value){
   return _new
 }
 
-function standardize(_array){
+function standardize(_array, tiny_rad){
   _array_c = _array.slice();
   _min = _array_c.sort(function(a, b){return a - b})[0];
   _max = _array_c.sort(function(a, b){return b - a})[0];
@@ -201,7 +210,7 @@ function ScaleArray(_array, value){
       _array[_i] = parseInt(_array[_i]);
     }
     _total = Sum(_array);
-    alert(_total);
+    // alert(_total);
     for (_i=0; _i<_array.length; _i++){
       _new.push(_array[_i] * value / _total);
     }
@@ -227,6 +236,20 @@ function startup(){
   }
 }
 
+function getCategoriesVector(_array){
+  /* Function that transforms a vector into a categorical vector with num encoding
+   * Input     _array         array to transform, list
+   * Output    _new           categorical array, list
+   *
+   */
+  _unique = getUnique(_array);
+  _new = Array();
+  for (var i = 0; i < _array.length; i++) {
+    _new.push(getIndex(_unique, _array[i]));
+  }
+  return _new
+}
+
 function findGrid(height, max_value){
     /* Function that calculates the grid for a diagram.
      * Input:     height          max height of an element in the diagram, px, int
@@ -235,6 +258,7 @@ function findGrid(height, max_value){
      *                            for the grid; _grid_division - distance between
      *                            them in px, int
      */
+     // TODO: add min value, so that the range could be focused only on the necessary values
      max_value = Math.round(max_value);
      _length = max_value.toString().length;
      vals = new Array();
@@ -254,45 +278,70 @@ function findGrid(height, max_value){
      return [vals, _grid_division]
 }
 
-function placeAxis(_layer, start_coords_x, start_coords_y, image_size){
+function placeAxis(_layer, start_coords_x, start_coords_y, config, _color){
   var axis = app.activeDocument.layers.getByName(_layer).pathItems.add();
   // Placing y axis
   coords = new Array(start_coords_y, [start_coords_y[0],
-                                      image_size - (0.5 * margin)]);
+                                      config.image_size - (0.5 * config.margin)]);
   axis.setEntirePath(coords);
-  axis.strokeWidth = Math.round(image_size / 400);
+  axis.strokeWidth = Math.round(config.image_size / 600);
+  axis.strokeColor = _color;
   var axis1 = app.activeDocument.layers.getByName(_layer).pathItems.add();
   // Placing x axis
-  coords = new Array(start_coords_x, [image_size - margin, start_coords_x[1]]);
+  coords = new Array(start_coords_x, [config.image_size - config.margin,
+                                      start_coords_x[1]]);
   axis1.setEntirePath(coords);
-  axis1.strokeWidth = Math.round(image_size / 400);
+  axis1.strokeWidth = Math.round(config.image_size / 600);
+  axis.strokeColor = _color;
 }
 
-function makeGrid(vals, step, start_coords, _layer, _color){
-  for (var val=0; val<vals.length; val++){
-    var _line = app.activeDocument.layers.getByName(_layer).pathItems.add();
-    _line.setEntirePath(Array([start_coords[0][0], start_coords[0][1] + (val * step)],
-                        [start_coords[1][0], start_coords[1][1] + (val * step)]));
-    _line.strokeWidth = 0.25;
-    _line.strokeColor = _color;
-    var _text = app.activeDocument.layers.getByName(_layer).textFrames.add();
-    ///////////////////////
-    /* Get the text margin.
-    */
-    _text.contents = 0;
-    textApp(_text, 30, _color);
-    text_margin=_text.width
-    ///////////////////////
-    _text.contents = vals[val];
-    textApp(_text, 30, _color);
-    if (vals[val] == 0){
-      _text.top = Math.round(start_coords[0][1] + (val * step) + (_text.height * 1.5));
-    }
-    else {
-      _text.top = Math.round(start_coords[0][1] + (val * step) + (_text.height * 0.5));
-    }
-    _text.left = Math.round(start_coords[0][0] - text_margin - _text.width);
 
+
+
+function gridNumbers(vals, step, start_coords, _layer, _color, axis, grid){
+  /* Function that draws a horizontal grid on a diagram
+   * Input: vals         values to be mentioned on the grid
+   *        step         step between the lines and the values, int in px
+   *        start_coords array of the first line coords [[x1,y1], [x2, y2]]
+   *        _layer       name of the layer to place the elements on, str
+   *        _color       color of the lines, Color
+   *        axis         axis along which the grid is made, 0 - hor lines
+   *                                                        1 - vert lines
+   */
+  text_size = 30;
+  for (var val=0; val<vals.length; val++){
+    s_coord = [start_coords[0][0], start_coords[0][1]]
+    e_coord = [start_coords[1][0], start_coords[1][1]]
+    s_coord[axis] += (val * step)
+    e_coord[axis] += (val * step)
+    if (grid == true) {
+      var _line = app.activeDocument.layers.getByName(_layer).pathItems.add();
+      _line.setEntirePath(Array(s_coord, e_coord));
+      _line.strokeWidth = 0.25;
+      _line.strokeColor = _color;
+    }
+    if (vals[val]!=0){
+      var _text = app.activeDocument.layers.getByName(_layer).textFrames.add();
+      _text.contents = 0;
+      textApp(_text, text_size, getArrayFromColor(_color));
+      text_margin = _text.width;
+      _text.contents = vals[val];
+
+      textApp(_text, 30, getArrayFromColor(_color));
+      // if (vals[val] == 0){
+      //   _text.top = Math.round(s_coord[1] + (_text.height * 1.5));
+      //   _text.left = Math.round(s_coord[0] - text_margin - _text.width);
+      // }
+
+      if (axis == 0) {
+        _text.top = Math.round(s_coord[1] - (_text.height * 0.5));
+        _text.left = Math.round(s_coord[0] - (_text.width * 0.5));
+      }
+      else {
+        _text.top = Math.round(s_coord[1] + (_text.height * 0.5));
+        _text.left = Math.round(s_coord[0] - text_margin - _text.width);
+      }
+    }
   }
 }
 
@@ -386,6 +435,10 @@ function Sum(_array) {
 
 function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
+}
+
+function getMinOfArray(numArray) {
+  return Math.min.apply(null, numArray);
 }
 
 function getIndex(_array, _element){
