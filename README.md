@@ -5,8 +5,9 @@ The diagrams available are:
 * Circular Relationship Diagram
 * Barplot
 * Pie
+* Scatterplot
 
-<img src="assets/chart_diagram_irregular_size.png" hspace="10" width="200"/><img src="assets/barplot.png" hspace="10" width="200"><img src="assets/donut1.png" hspace="10" width="200"><img src="assets/pie.png" hspace="10" width="200">
+<img src="assets/chart_diagram_irregular_size.png" hspace="10" width="200"/><img src="assets/barplot_black.png" hspace="10" width="200"><img src="assets/donut1.png" hspace="10" width="200"><img src="assets/scatter.png" hspace="10" width="200">
 ## Installation
 
 download zip file or use
@@ -15,6 +16,14 @@ download zip file or use
 git clone https://github.com/STASYA00/illjs.git
 
 ```
+
+## How To
+
+The interface is very simple to use, you need to activate the plugin (File -> Scripts -> choose yours -> navigate to the folder and choose main.js; choose your csv.
+
+Choose the diagram you want to make:
+
+<img src="assets/main_ui.png" width="600"/>
 
 ## Chart Diagram
 
