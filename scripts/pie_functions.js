@@ -22,7 +22,7 @@ function distribute(_obj, _angle, _radius, _own_length, center){
   _obj.top = _y; // assigns the object's top offset in pixels
 }
 
-function makeDonut(_layer, center){
+function makeDonut(_layer, center, colors){
   /* A function that iterates over the elements of the pie diagram and cuts
    * the central piece from them (so the diagram from pie becomes a donut).
    * Input:     _layer          layer that the pie diagram elements belong to
@@ -32,9 +32,9 @@ function makeDonut(_layer, center){
     var small_circle = app.activeDocument.layers.getByName(_layer).pathItems.ellipse(((config.center[1])+(0.4*config.radius)),
       ((config.center[0]) - (0.4*config.radius)), .8*config.radius, .8*config.radius, false);
     small_circle.filled = true;
-    small_circle.fillColor = makeColor([255, 255, 255]);
+    small_circle.fillColor = colors[0];
     small_circle.stroked = true;
-    small_circle.strokeColor = makeColor([100, 100, 100]);
+    small_circle.strokeColor = colors[1];
     minusFront(app.activeDocument.layers.getByName(_layer).pathItems[_item+1], small_circle);
   }
 }

@@ -48,7 +48,7 @@ function pieMain(config, csvFile){
 
         }
         if (feature[2] == false){
-          makeDonut('Parts', config.center);
+          makeDonut('Parts', config.center, diagram_color);
         }
       }
       else {

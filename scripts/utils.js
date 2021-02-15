@@ -292,7 +292,7 @@ function placeAxis(_layer, start_coords_x, start_coords_y, config, _color){
                                       start_coords_x[1]]);
   axis1.setEntirePath(coords);
   axis1.strokeWidth = Math.round(config.image_size / 600);
-  axis.strokeColor = _color;
+  axis1.strokeColor = _color;
 }
 
 
