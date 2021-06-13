@@ -18,7 +18,7 @@ function diagramInterface(){
    *               Connection threshold [, size column]]
    */
 
-  dir = "D:/Google Drive/Portfolio/references_for_portfolio/WORK/##/illjs/assets/icons/"
+  dir = "assets/icons/"
   var _win = new Window("dialog", 'Choose diagram.', undefined,// [300,100,800,600],
                         {closeButton:true, borderless:false});
   _win.margins = [7, 7, 7, 10];
@@ -62,8 +62,8 @@ function pieInterface(_array){
    * Output: list [Category Column, Subcategory Column, Connection Column,
    *               Connection threshold [, size column]]
    */
-  var icons_a = File("D:/Google Drive/Portfolio/references_for_portfolio/WORK/##/illjs/assets/icons/circle.png");
-  var icons_b = File("D:/Google Drive/Portfolio/references_for_portfolio/WORK/##/illjs/assets/icons/donut.png");
+  var icons_a = File("assets/icons/circle.png");
+  var icons_b = File("assets/icons/donut.png");
   var _win = new Window("dialog", 'Choose the columns.', undefined,
                         {closeButton:true, borderless:false});
   // Adds a dropdown list to define the names of the items
@@ -106,8 +106,8 @@ function barInterface(_array){
    * Output: list [Category Column, Subcategory Column, Connection Column,
    *               Connection threshold [, size column]]
    */
-  var icons_a = File("D:/Google Drive/Portfolio/references_for_portfolio/WORK/##/illjs/assets/icons/circle.png");
-  var icons_b = File("D:/Google Drive/Portfolio/references_for_portfolio/WORK/##/illjs/assets/icons/donut.png");
+  var icons_a = File("assets/icons/circle.png");
+  var icons_b = File("assets/icons/donut.png");
   var _win = new Window("dialog", 'Choose the columns.', undefined,
                         {closeButton:false});
   // Adds a dropdown list to define the names of the items

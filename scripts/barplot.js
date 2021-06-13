@@ -5,6 +5,7 @@
 // TODO: catplot and violinplot
 
 #include "interface.js";
+#include "mode.js";
 #include "utils.js";
 
 
