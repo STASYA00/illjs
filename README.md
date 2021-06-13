@@ -7,60 +7,28 @@ The diagrams available are:
 * Pie
 * Scatterplot
 
-<img src="assets/chart_diagram_irregular_size.png" hspace="10" width="200"/><img src="assets/barplot_black.png" hspace="10" width="200"><img src="assets/donut1.png" hspace="10" width="200"><img src="assets/scatter.png" hspace="10" width="200">
+<img src="assets/illustration.gif" hspace="10" width="600"/>
 ## Installation
 
 download zip file or use
 
 ```
-git clone https://github.com/STASYA00/illjs.git
+$ git clone https://github.com/STASYA00/illjs.git
 
 ```
 
 ## How To
 
-The interface is very simple to use, you need to activate the plugin (File -> Scripts -> choose yours -> navigate to the folder and choose main.js; choose your csv.
+The interface is very simple to use, you need to activate the plugin (File -> Scripts -> Other Scripts -> navigate to the folder and choose __main.js__; choose your csv.
+
+Make sure your csv contains correct data, no missing values. Attention: some diagrams have not been updated to support negative values yet.
 
 Choose the diagram you want to make:
 
 <img src="assets/main_ui.png" width="600"/>
 
-## Chart Diagram
+Enjoy!
 
-<img src="assets/chart_diagram_irregular_size.png" width="600"/>
-
-The diagram consists of the following attributes:
-* Category;
-* Subcategory;
-* Connection;
-* Size (optional).
-
-The file is a document of size 1200x1200 px where the diagram is fit, based on the length of word elements (try to make them shorter, though). The first popup window will require a csv file, containing at least the first 3 attributes as columns. In my example I used the data of global CH4 emissions (http://www.fao.org/faostat/en/#data/EM). The csv should be structured in the following way:
-* Have the required columns (category, subcategory, connection parameter);
-* Rows should be grouped by category;
-* Connection attribute should be numerical;
-* no null or missing values.
-
-In the csv I used the Region column is the Category, the Country is the Subcategory (a subdivision of Category) and I can use any of the numerical columns (role of agriculture in economy / GDP / CH4 / role of services in industry / etc). the first and the last rows are likely to be in the top part of the diagram, so if you would like to have a specific order, you might need to restructure the .csv file.
-
-<img src="assets/csv_example.png" width="600">
-
-When the csv is ready, we can proceed directly to the diagram creation.
-
-in Adobe Illustrator go to File -> Scripts -> Other script (I would advise you to add a shortcut for this command). In the next window go to the location of the script and choose the file 'circular_relationship_diagram.js'.
-
-![How to run a script](assets/script_running.png)
-
-Choose your .csv file in the new window.
-
-Right after that a pop-up prompt window appears. The process is rather intuitive: outer circle is the Category column in your csv, Inner Circle is the Subcategory column. In case you want to make an additional comparison between your samples (countries in my case), you can choose to change the size of the circles based on some value. To do that, tick the "Display quantitative difference in the inner circle" option and choose the size column. If you don't want to compare untick the "Display quantitative difference in the inner circle" and leave the selection under it empty.
-Then, choose the column of comparison (numerical attribute) and the threshold value. by defining the threshold value, you set the connectivity limit: the samples that have the difference less than the threshold value will be connected (for example, I set the threshold of 0.1 and choose as the comparison column Agriculture in Economy, the countries whose values differ by 0.1 will be connected, like Namibia, Swaziland and New Zealand).
-
-![Options window](assets/prompt_window.png)
-
-The diagram should be ready.
-
-<img src="assets/chart_diagram1.png" width="600">
 
 
 
