@@ -18,7 +18,7 @@ function diagramInterface(){
    *               Connection threshold [, size column]]
    */
 
-  dir = "assets/icons/"
+  dir = $.fileName.slice(0, -20) + "assets/icons/";
   var _win = new Window("dialog", 'Choose diagram.', undefined,// [300,100,800,600],
                         {closeButton:true, borderless:false});
   _win.margins = [7, 7, 7, 10];
@@ -62,8 +62,9 @@ function pieInterface(_array){
    * Output: list [Category Column, Subcategory Column, Connection Column,
    *               Connection threshold [, size column]]
    */
-  var icons_a = File("../assets/icons/circle.png");
-  var icons_b = File("../assets/icons/donut.png");
+  dir = $.fileName.slice(0, -20) + "assets/icons/";
+  var icons_a = File(dir + "circle.png");
+  var icons_b = File(dir + "donut.png");
   var _win = new Window("dialog", 'Choose the columns.', undefined,
                         {closeButton:true, borderless:false});
   // Adds a dropdown list to define the names of the items
@@ -106,8 +107,9 @@ function barInterface(_array){
    * Output: list [Category Column, Subcategory Column, Connection Column,
    *               Connection threshold [, size column]]
    */
-  var icons_a = File("../assets/icons/circle.png");
-  var icons_b = File("../assets/icons/donut.png");
+  dir = $.fileName.slice(0, -20) + "assets/icons/";
+  var icons_a = File(dir + "circle.png");
+  var icons_b = File(dir + "donut.png");
   var _win = new Window("dialog", 'Choose the columns.', undefined,
                         {closeButton:false});
   // Adds a dropdown list to define the names of the items
